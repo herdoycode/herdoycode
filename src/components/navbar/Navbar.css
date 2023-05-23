@@ -1,7 +1,10 @@
+.nav__wrapper {
+  background: var(--color-primary);
+}
 .nav {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 8vh;
   background: var(--color-primary);
 }
@@ -22,6 +25,7 @@
 .nav__link {
   text-decoration: none;
   color: #ddd;
+  font-weight: 300;
 }
 
 .nav__toggler {

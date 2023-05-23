@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
-  --color-primary: #00415f;
+  --color-primary: #004461;
   --color-secondary: #003b57;
   --color-body: #d6d6d6;
   --color-text: #333;
@@ -28,7 +28,7 @@ body {
   font-family: "Poppins", sans-serif;
   background: var(--color-body);
   color: var(--color-text);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 h1,
@@ -64,11 +64,25 @@ button {
   cursor: pointer;
   text-transform: uppercase;
   background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
 button:hover {
   transition: 0.5s ease-out;
   background: var(--color-secondary);
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+  button {
+    height: 45px;
+    font-size: 11px;
+  }
 }
 
 .container,

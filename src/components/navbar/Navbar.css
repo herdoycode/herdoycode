@@ -1,18 +1,18 @@
 .nav__wrapper {
-  background: var(--color-primary);
+  background: var(--color-white);
 }
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 8vh;
-  background: var(--color-primary);
+  background: var(--color-white);
 }
 .nav__brand {
   text-transform: uppercase;
   text-decoration: none;
-  color: #ddd;
-  font-weight: 600;
+  color: var(--color-text);
+  font-weight: 700;
 }
 
 .nav__menu {
@@ -24,8 +24,7 @@
 
 .nav__link {
   text-decoration: none;
-  color: #ddd;
-  font-weight: 300;
+  color: var(--color-text);
 }
 
 .nav__toggler {
@@ -35,7 +34,7 @@
   width: 2.5rem;
   height: 0.2rem;
   margin: 0.4rem;
-  background: #ddd;
+  background: var(--color-text);
   transition: 0.3s ease-in;
 }
 
@@ -46,11 +45,11 @@
   }
   .nav__menu {
     position: fixed;
-    top: 7vh;
+    top: 8vh;
     right: 0;
     height: 93vh;
     width: 50vw;
-    background: var(--color-primary);
+    background: var(--color-white);
     flex-direction: column;
     transform: translateX(100%);
     transition: 0.5s ease-in;

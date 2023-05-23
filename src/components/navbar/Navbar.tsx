@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Navbar.css";
+import ThemeSwitch from "../themeSwitch/ThemeSwitch";
 
 function Navbar() {
   const [active, setActive] = useState("nav__menu");
@@ -45,6 +46,9 @@ function Navbar() {
             <a href="#" className="nav__link">
               Contact
             </a>
+          </li>
+          <li className="nav__item">
+            <ThemeSwitch />
           </li>
         </ul>
         <div onClick={navToggle} className={icon}>

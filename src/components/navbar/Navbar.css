@@ -1,5 +1,8 @@
 .nav__wrapper {
   background: var(--color-white);
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 .nav {
   display: flex;

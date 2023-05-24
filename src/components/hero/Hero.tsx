@@ -1,5 +1,6 @@
 import { AiOutlineCloudDownload } from "react-icons/ai";
 import "./Hero.css";
+import Social from "../social/Social";
 const Hero = () => {
   return (
     <div className="hero__wrapper">
@@ -20,6 +21,7 @@ const Hero = () => {
                 Download Cv
                 <AiOutlineCloudDownload style={{ fontSize: "25px" }} />
               </button>
+              <Social />
             </div>
           </div>
           <div className="hero__right">

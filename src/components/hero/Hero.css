@@ -29,6 +29,9 @@
 .hero__title span {
   color: var(--color-primary);
 }
+.hero__info button {
+  margin-bottom: 30px;
+}
 
 @media screen and (max-width: 991px) {
   .hero__img {

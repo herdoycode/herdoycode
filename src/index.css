@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
+  --color-primary: #6c63ff;
   --color-body: #f2f3ff;
   --color-dark: #080b13;
   --color-white: #fff;
@@ -8,7 +9,7 @@
 }
 
 [data-theme="dark"] {
-  --color-body: #080b13;
+  --color-body: #0e1720;
   --color-dark: #fff;
   --color-white: #000;
   --color-text: #a1a1a1;
@@ -42,6 +43,26 @@ h4 {
   font-weight: 600;
   margin: 0;
   padding: 0;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.4rem;
+  }
 }
 
 a {

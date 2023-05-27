@@ -1,0 +1,12 @@
+button {
+  outline: none;
+  border: none;
+  border-radius: 3rem;
+  height: 4rem;
+  padding: 0rem 2rem;
+  cursor: pointer;
+}
+.primary {
+  background: var(--color-primary);
+  color: #ddd;
+}

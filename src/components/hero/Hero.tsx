@@ -1,20 +1,13 @@
 import Button from "../common/button/Button";
-import SectionHeader from "../common/sectionHeader/sectionHeader";
-import "./About.css";
-const About = () => {
+import "./Hero.css";
+const Hero = () => {
   return (
-    <div className="about-wrapper">
-      <SectionHeader> About Me </SectionHeader>
+    <div className="hero-wrapper">
       <div className="container">
-        <div className="about">
-          <div className="about__left">
-            <div>
-              <img className="about-img" src="/me.png" alt="" />
-            </div>
-          </div>
-          <div className="about__right">
-            <div className="about__content">
-              <h1>Hi, I'am Herdy</h1>
+        <div className="hero">
+          <div className="hero__left">
+            <div className="hero__content">
+              <h1>Hi, I'am Herody</h1>
               <h2>Full-Stack javaScript developer</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
@@ -24,10 +17,15 @@ const About = () => {
               <Button className="primary"> Download CV </Button>
             </div>
           </div>
+          <div className="hero__right">
+            <div>
+              <img className="hero-img" src="/me.png" alt="" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default About;
+export default Hero;

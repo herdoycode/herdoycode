@@ -1,15 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
-  --color-primary: #006280;
-  --color-body: #ebebeb;
+  --color-body: #f2f3ff;
+  --color-dark: #080b13;
   --color-white: #fff;
   --color-text: #333;
+  --box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
 [data-theme="dark"] {
-  --color-white: #111111;
-  --color-body: #101722;
-  --color-text: #ddd;
+  --color-body: #080b13;
+  --color-dark: #fff;
+  --color-white: #000;
+  --color-text: #a1a1a1;
+  --box-shadow: 0px 4px 5px 0px rgba(255, 255, 255, 0.3);
 }
 
 *,
@@ -41,6 +44,11 @@ h4 {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
 li {
   list-style: none;
 }
@@ -51,34 +59,6 @@ img {
 
 .clickable {
   cursor: pointer;
-}
-
-button {
-  color: #ddd;
-  border: none;
-  height: 50px;
-  padding: 0px 25px;
-  border-radius: 30px;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 3px;
-  cursor: pointer;
-  text-transform: uppercase;
-  background: var(--color-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-
-@media screen and (max-width: 768px) {
-  body {
-    font-size: 15px;
-  }
-  button {
-    height: 45px;
-    font-size: 11px;
-  }
 }
 
 .container,

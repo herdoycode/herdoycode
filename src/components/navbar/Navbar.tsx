@@ -1,64 +1,82 @@
 import { useState } from "react";
 import "./Navbar.css";
-import ThemeSwitch from "../themeSwitch/ThemeSwitch";
+import {
+  BsFacebook,
+  BsTwitter,
+  BsLinkedin,
+  BsInstagram,
+  BsGithub,
+} from "react-icons/bs";
 
-function Navbar() {
-  const [active, setActive] = useState("nav__menu");
-  const [icon, setIcon] = useState("nav__toggler");
-  const navToggle = () => {
-    if (active === "nav__menu") {
-      setActive("nav__menu nav__active");
-    } else setActive("nav__menu");
+const navItems = [
+  { id: 1, link: "3", label: "Home" },
+  { id: 2, link: "3", label: "About" },
+  { id: 3, link: "3", label: "Skills" },
+  { id: 4, link: "3", label: "Portfolio" },
+  { id: 5, link: "3", label: "Contact" },
+];
+const socialIcons = [
+  { id: 1, link: "#", icon: <BsFacebook /> },
+  { id: 2, link: "#", icon: <BsTwitter /> },
+  { id: 3, link: "#", icon: <BsLinkedin /> },
+  { id: 4, link: "#", icon: <BsInstagram /> },
+  { id: 5, link: "#", icon: <BsGithub /> },
+];
+
+const Navbar = () => {
+  const [active, setActive] = useState<string>("nav__center");
+  const [icon, setIcon] = useState<string>("toggle-icon");
+  const handleToggle = () => {
+    if (active === "nav__center") {
+      setActive("nav__center nav-collapse");
+    } else setActive("nav__center");
 
     // Icon Toggler
-    if (icon === "nav__toggler") {
-      setIcon("nav__toggler toggle");
-    } else setIcon("nav__toggler");
+    if (icon === "toggle-icon") {
+      setIcon("toggle-icon btnToggle");
+    } else setIcon("toggle-icon");
   };
+
   return (
-    <div className="nav__wrapper">
-      <nav className="nav container">
-        <a href="#" className="nav__brand">
-          herdoy
-        </a>
-        <ul className={active}>
-          <li className="nav__item">
-            <a href="#" className="nav__link">
-              Home
+    <header className="header">
+      <div className="container">
+        <nav className="navbar">
+          <div className="nav__left">
+            <a href="#" className="nav__brand">
+              Herdoy
             </a>
-          </li>
-          <li className="nav__item">
-            <a href="#" className="nav__link">
-              About
-            </a>
-          </li>
-          <li className="nav__item">
-            <a href="#" className="nav__link">
-              Portfolio
-            </a>
-          </li>
-          <li className="nav__item">
-            <a href="#" className="nav__link">
-              Skills
-            </a>
-          </li>
-          <li className="nav__item">
-            <a href="#" className="nav__link">
-              Contact
-            </a>
-          </li>
-          <li className="nav__item">
-            <ThemeSwitch />
-          </li>
-        </ul>
-        <div onClick={navToggle} className={icon}>
-          <div className="line1"></div>
-          <div className="line2"></div>
-          <div className="line3"></div>
-        </div>
-      </nav>
-    </div>
+          </div>
+          <div className={active}>
+            <ul className="nav-menu">
+              {navItems.map((item) => (
+                <li key={item.id} className="nav__item">
+                  <a href={item.link} className="nav__link">
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="nav__right">
+            <div className="social-nav">
+              {socialIcons.map((item) => (
+                <a key={item.id} href={item.link}>
+                  {item.icon}
+                </a>
+              ))}
+            </div>
+          </div>
+          <div onClick={handleToggle} className="nav__toggler">
+            <div className={icon}>
+              <div className="toggle-icon-1"></div>
+              <div className="toggle-icon-2"></div>
+              <div className="toggle-icon-3"></div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
   );
-}
+};
 
 export default Navbar;

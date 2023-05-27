@@ -1,76 +1,82 @@
-.nav__wrapper {
-  background: var(--color-white);
-  position: fixed;
-  width: 100%;
-  top: 0;
+.header {
+  box-shadow: var(--box-shadow);
 }
-.nav {
+.navbar {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.nav__left,
+.nav__center,
+.nav__right {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 8vh;
-  background: var(--color-white);
+  justify-content: center;
+  height: 80px;
+  background: var(--color-body);
 }
-.nav__brand {
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--color-text);
-  font-weight: 700;
-}
-
-.nav__menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 3rem;
-}
-
-.nav__link {
-  text-decoration: none;
-  color: var(--color-text);
-}
-
 .nav__toggler {
   display: none;
 }
-.nav__toggler div {
-  width: 2.5rem;
-  height: 0.2rem;
-  margin: 0.4rem;
-  background: var(--color-text);
-  transition: 0.3s ease-in;
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.social-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 @media screen and (max-width: 768px) {
   .nav__toggler {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .toggle-icon {
     cursor: pointer;
   }
-  .nav__menu {
+  .toggle-icon div {
+    width: 2.7rem;
+    height: 0.2rem;
+    margin: 0.5rem 0rem;
+    background: var(--color-text);
+    transition: 0.5s ease;
+  }
+  .nav__left,
+  .nav__right,
+  .nav__toggler {
+    z-index: 20;
+  }
+  .nav__center {
+    height: auto;
     position: fixed;
-    top: 8vh;
-    right: 0;
-    height: 93vh;
-    width: 50vw;
-    background: var(--color-white);
+    width: 100%;
+    top: 80px;
+    left: 0;
+    z-index: 10;
+    transform: translateY(-100%);
+    transition: 0.5s ease;
+  }
+  .nav-menu {
     flex-direction: column;
-    transform: translateX(100%);
-    transition: 0.5s ease-in;
+    padding: 2rem 0rem;
+  }
+  .nav-collapse {
+    transform: translateY(0);
+    box-shadow: var(--box-shadow);
   }
 }
-/* Active Class */
-.nav__active {
-  transform: translateX(0%);
-}
-
-/* Toggle Icon Animation */
-
-.toggle .line1 {
+.btnToggle .toggle-icon-1 {
   transform: rotate(-45deg) translate(-4px, 5px);
 }
-.toggle .line2 {
+.btnToggle .toggle-icon-2 {
   opacity: 0;
 }
-.toggle .line3 {
+.btnToggle .toggle-icon-3 {
   transform: rotate(45deg) translate(-4px, -5px);
 }

@@ -7,6 +7,7 @@ import {
   BsInstagram,
   BsGithub,
 } from "react-icons/bs";
+import ThemeSwitch from "../themeSwitch/ThemeSwitch";
 
 const navItems = [
   { id: 1, link: "3", label: "Home" },
@@ -66,12 +67,16 @@ const Navbar = () => {
               ))}
             </div>
           </div>
-          <div onClick={handleToggle} className="nav__toggler">
-            <div className={icon}>
+          <div className="nav__toggler">
+            <ThemeSwitch />
+            <div onClick={handleToggle} className={icon}>
               <div className="toggle-icon-1"></div>
               <div className="toggle-icon-2"></div>
               <div className="toggle-icon-3"></div>
             </div>
+          </div>
+          <div className="theme__switch">
+            <ThemeSwitch />
           </div>
         </nav>
       </div>

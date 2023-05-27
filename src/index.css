@@ -4,7 +4,7 @@
   --color-dark: #080b13;
   --color-white: #fff;
   --color-text: #333;
-  --box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.3);
+  --box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 [data-theme="dark"] {
@@ -12,7 +12,7 @@
   --color-dark: #fff;
   --color-white: #000;
   --color-text: #a1a1a1;
-  --box-shadow: 0px 4px 5px 0px rgba(255, 255, 255, 0.3);
+  --box-shadow: 0px 4px 5px 0px rgba(255, 255, 255, 0.2);
 }
 
 *,

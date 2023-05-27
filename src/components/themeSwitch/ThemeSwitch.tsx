@@ -18,7 +18,7 @@ const ThemeSwitch = () => {
   }, [mode, toggleMode]);
 
   return (
-    <div className="clickable theme__switch" onClick={toggleMode}>
+    <div className="clickable theme-switch" onClick={toggleMode}>
       {mode === "dark" ? (
         <BsSun style={{ fontSize: "18px", color: "inharit" }} />
       ) : (

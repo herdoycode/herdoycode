@@ -1,5 +1,5 @@
 import Button from "../common/button/Button";
-import SectionHeader from "../common/sectionHeader/sectionHeader";
+import SectionHeader from "../common/sectionHeader/SectionHeader";
 import "./About.css";
 const About = () => {
   return (
